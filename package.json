@@ -1,0 +1,49 @@
+{
+  "name": "@flunch/raf",
+  "version": "0.0.1",
+  "description": "RequestAnimationFrame utilities",
+  "source": "index.js",
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "test": "eslint src/**",
+    "demo": "microbundle watch -i demo/demo.js -f umd -o demo --target browser & light-server -s demo -p 8080 -w demo/**/*",
+    "demo:deploy": "ncp docs demo/docs && ghp demo -f && rimraf demo/docs",
+    "docs": "rimraf docs && jsdoc -c .jsdoc.json",
+    "docs:serve": "light-server -s docs -p 8080 -w docs/**/*",
+    "prepublishOnly": "npm run test && npm run docs && npm run demo:deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flunch/raf.git"
+  },
+  "keywords": [
+    "raf",
+    "timer"
+  ],
+  "author": "flunch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flunch/raf/issues"
+  },
+  "homepage": "https://github.com/flunch/raf#readme",
+  "devDependencies": {
+    "docdash": "^0.4.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "ghp": "^1.1.4",
+    "jsdoc": "^3.5.5",
+    "light-server": "^2.5.0",
+    "microbundle": "^0.4.4",
+    "ncp": "^2.0.0",
+    "rimraf": "^2.6.2"
+  }
+}
