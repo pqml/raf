@@ -1,8 +1,8 @@
 # Raf
 RequestAnimationFrame utilities
 
-[→ Documentation](https://flunch.github.io/raf/docs) |
-[→ Example](https://flunch.github.io/raf)
+[→ Documentation](https://interneeeeet.github.io/raf/docs) |
+[→ Example](https://interneeeeet.github.io/raf)
 
 <br><br>
 
@@ -28,10 +28,10 @@ RequestAnimationFrame utilities
 
 ```sh
 # using npm
-$ npm install --save @flunch/raf
+$ npm install --save @internet/raf
 
 # or using yarn
-$ yarn add @flunch/raf
+$ yarn add @internet/raf
 ```
 
 <br>
@@ -40,7 +40,7 @@ $ yarn add @flunch/raf
 
 ##### Core
 ```js
-import raf from '@flunch/raf'
+import raf from '@internet/raf'
 
 function tick (dt) {
   console.log('called on new frame')
@@ -51,7 +51,7 @@ raf.add(tick)
 
 ##### Using other utilities
 ```js
-import { raf, fpsLimiter } from '@flunch/raf'
+import { raf, fpsLimiter } from '@internet/raf'
 
 function tick (dt) {
   console.log('Called at a framerate of 10fps')
@@ -63,7 +63,7 @@ raf.add(fpsLimiter(10, tick))
 <br>
 
 ## Documentation
-Full documentation available from https://flunch.github.io/raf/docs
+Full documentation available from https://interneeeeet.github.io/raf/docs
 
 <br>
 
