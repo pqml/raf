@@ -2,20 +2,33 @@ import { raf, fpsLimiter, RafTimer } from '..'
 
 function log (el, msg, reset = false) { el.innerHTML = (reset ? '' : el.innerHTML) + msg + '\n' }
 
+const toRun = []
+
+;(function () {
+  const $ = document.querySelector('pre.log')
+  function tick (dt) {
+    log($, 'addBefore & requestOnce')
+    raf.removeBefore(tick)
+    toRun.forEach(raf.add)
+  }
+  raf.addBefore(tick)
+  raf.requestOnce()
+})()
+
 // raf
-(function () {
+;(function () {
   const $ = document.querySelector('pre.raf')
   function tick (dt) {
     log($, 'Deltatime: ' + dt + 'ms', true)
   }
-  raf.add(tick)
+  toRun.push(tick)
 })()
 
 // fps limiter
 ;(function () {
   const $ = document.querySelector('pre.fpslimiter')
   let ping = true
-  raf.add(fpsLimiter(1, function () {
+  toRun.push(fpsLimiter(1, function () {
     log($, (ping ? '—> Ping!' : '<— Pong!') + ' (1fps framerate)', true)
     console.log('ok')
     ping = !ping
@@ -31,5 +44,5 @@ function log (el, msg, reset = false) { el.innerHTML = (reset ? '' : el.innerHTM
     log($, 'Called — Next call in ' + nDelay + 'ms', true)
     restart(nDelay)
   })
-  raf.add(dt => timer.update(dt))
+  toRun.push(dt => timer.update(dt))
 })()
