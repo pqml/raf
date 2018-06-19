@@ -1,6 +1,6 @@
 {
   "name": "@internet/raf",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "RequestAnimationFrame utilities",
   "source": "index.js",
   "main": "index.js",
