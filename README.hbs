@@ -1,0 +1,75 @@
+# Raf
+[:books: **Documentation**](#api)  |  [:tada: **Example**](https://pqml.github.io/raf) | [:globe_with_meridians: **Internet modules**](https://www.npmjs.com/org/internet)
+
+
+- RAF Singleton with high resolution delta time (if supported)
+  - Autostop & autostart requestAnimationFrame when adding/removing function
+  - `setBefore` & `setAfter` methods to add function at the beginning and the end of the raf call
+- fps limiter
+- RAF-based timer Class
+
+<br>
+
+# Requirements
+- ES6 Modules support
+  - Using a module bundler like Webpack, Rollup or Parcel
+  - [Native support from browser](https://caniuse.com/#feat=es6-module)
+  - From NodeJS
+- [window.requestAnimationFrame()](https://developer.mozilla.org/fr/docs/Web/API/Window/requestAnimationFrame)
+
+<br>
+
+# Installation
+
+```sh
+# using npm
+$ npm install --save @internet/raf
+
+# or using yarn
+$ yarn add @internet/raf
+```
+
+<br>
+
+<a name="api"></a>
+# API
+
+```js
+import { raf, fpsLimiter, RafTimer } from '@internet/raf'
+```
+
+- [:movie_camera: **raf**](#module_raf): _Raf core_
+- [:hourglass_flowing_sand: **fpsLimiter**](#module_raf): _Limit function calls to a specific framerate_
+- [:alarm_clock: **RafTimer**](#module_raf): _Raf-based timer class_
+
+<br>
+
+<a name="module_raf"></a>
+## :movie_camera: raf
+{{#module name="raf"}}
+{{>body~}}
+#### API
+{{>member-index~}}
+<br>
+{{>members~}}
+{{/module}}
+
+<br>
+
+<a name="fpsLimiter"></a>
+## :hourglass_flowing_sand: fpsLimiter
+{{#globals name="fpsLimiter"}}
+{{>body~}}
+{{/globals}}
+
+<br>
+
+<a name="RafTimer"></a>
+## :alarm_clock: RafTimer
+{{#globals name="RafTimer"}}
+{{>body~}}
+#### API
+{{>member-index~}}
+<br>
+{{>members~}}
+{{/globals}}

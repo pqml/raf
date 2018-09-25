@@ -1,4 +1,4 @@
-import { raf, fpsLimiter, RafTimer } from '..'
+import { raf, fpsLimiter, RafTimer } from '../lib'
 
 function log (el, msg, reset = false) { el.innerHTML = (reset ? '' : el.innerHTML) + msg + '\n' }
 

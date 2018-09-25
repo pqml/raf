@@ -1,6 +1,6 @@
 import test from 'tape-promise/tape'
 import { wait } from './utils'
-import { raf } from '..'
+import { raf } from '../lib'
 
 const log = []
 function dispose () {
