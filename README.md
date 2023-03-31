@@ -89,7 +89,7 @@ Calling addBefore will not start the raf.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | fn | <code>function</code> |  | Function to be called at the start of the raf |
-| [prepend] | <code>function</code> | <code>false</code> | Prepend the function to the beginning of the functions list |
+| [prepend] | <code>boolean</code> | <code>false</code> | Prepend the function to the beginning of the functions list |
 
 
 * * *
@@ -106,7 +106,7 @@ Calling addAfter will not start the raf.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | fn | <code>function</code> |  | Function to be called at the end of the raf |
-| [prepend] | <code>function</code> | <code>false</code> | Prepend the function to the beginning of the functions list |
+| [prepend] | <code>boolean</code> | <code>false</code> | Prepend the function to the beginning of the functions list |
 
 
 * * *
@@ -122,7 +122,7 @@ Add a function for execution on each frame
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | fn | <code>function</code> |  | Function to be called |
-| [prepend] | <code>function</code> | <code>false</code> | Prepend the function to the beginning of the functions list |
+| [prepend] | <code>boolean</code> | <code>false</code> | Prepend the function to the beginning of the functions list |
 
 
 * * *
@@ -155,7 +155,6 @@ Calling removeAfter will not stop the raf.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | fn | <code>function</code> |  | Function to remove from the raf |
-| [prepend] | <code>function</code> | <code>false</code> | Prepend the function to the beginning of the functions list |
 
 
 * * *
